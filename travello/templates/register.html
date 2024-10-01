@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://th.bing.com/th/id/OIP.ShONaAOtXRxiOU6ojvR5MwHaHa?rs=1&pid=ImgDetMain">
+
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .message-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .main_nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main_nav li {
+            margin: 0 10px;
+        }
+
+        .main_nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main_nav">
+            <ul class="d-flex flex-row align-items-start justify-content-start">
+                <li class="active"><a href="index">Home</a></li>
+                <li><a href="about">About us</a></li>
+                {% if user.is_authenticated %}
+                    <li>Hello, {{ user.first_name }}</li>
+                    <li><a href="logout">Logout</a></li>
+                {% else %}
+                    <li><a href="register">Register</a></li>
+                    <li><a href="login">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container form-container">
+        <center>
+            <form action="register" method="post">
+                {% csrf_token %}
+                <input type="text" name="first_name" placeholder="First Name"><br>
+                <input type="text" name="last_name" placeholder="Last Name"><br>
+                <input type="text" name="username" placeholder="Username"><br>
+                <input type="email" name="email" placeholder="Email Address"><br>
+                <input type="password" name="password1" placeholder="Password"><br>
+                <input type="password" name="password2" placeholder="Confirm Password"><br>
+                <input type="submit" value="Register">
+            </form>
+
+            <div class="message-container">
+                {% for message in messages %}
+                    <h3>{{ message }}</h3>
+                {% endfor %}
+            </div>
+        </center>
+    </div>
+</body>
+</html>
