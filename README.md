@@ -8,8 +8,6 @@ Traveller is a web platform where users can explore and manage their favorite tr
 - **User Registration and Login**: Users can create accounts, log in, and manage their profiles.
 - **Travel Plans**: Users can view and manage their travel plans.
 - **Admin Controls**: Only admins can add or remove destination data.
-- **Collaborations**: Facilitates partnerships with travel agencies to offer curated experiences.
-
 ---
 
 ## Tech Stack
