@@ -13,7 +13,7 @@ Traveller is a web platform where users can explore and manage their favorite tr
 ## Tech Stack
 - **Backend**: Django Framework
 - **Frontend**: Basic HTML, CSS, and JavaScript
-- **Database**: PostgreSQL (for production), SQLite (for development)
+- **Database**: PostgreSQL
 - **Deployment**: Hosted on Render
 
 ---
