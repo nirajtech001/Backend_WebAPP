@@ -1,6 +1,6 @@
 
 
-# Traveller Web Platform
+# Traveller Website Backend - Django Framework
 
 Traveller is a web platform where users can explore and manage their favorite travel destinations. It provides personalized travel experiences and collaboration opportunities with travel agencies, helping users plan their trips while businesses can promote curated experiences and services.
 
