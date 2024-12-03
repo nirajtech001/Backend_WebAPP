@@ -70,10 +70,9 @@ Traveller is a web platform where users can explore and manage their favorite tr
 
 ## Database Schema
 
+![image](https://github.com/user-attachments/assets/9f355cc6-32f0-4b4e-8085-ad8835e01a25)
 ### Models
 The project includes three main models:
-![image](https://github.com/user-attachments/assets/9f355cc6-32f0-4b4e-8085-ad8835e01a25)
-
 
 1. **User (accounts/models.py)**:
    - Fields: `username`, `email`, `password`, `is_admin`
